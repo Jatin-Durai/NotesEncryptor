@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encrypted Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    div {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p id="encryptedData">Encrypted Data: </p>
+  </div>
+
+  <script>
+    // Retrieve encrypted data from sessionStorage
+    const encryptedData = sessionStorage.getItem('encryptedData');
+  
+    // Display the encrypted data
+    const encryptedDataElement = document.getElementById('encryptedData');
+    encryptedDataElement.innerText = `Encrypted Data: ${encryptedData}`;
+  </script>
+  
+</body>
+</html>
